@@ -1,0 +1,40 @@
+services:
+  server:
+    build: .
+    container_name: Server-FL
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    ports:
+      - "8081:8081"
+    command: python server.py
+
+  node1:
+    build: .
+    container_name: Node-1
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    depends_on:
+      - server
+    command: python client.py 1
+
+  node2:
+    build: .
+    container_name: Node-2
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    depends_on:
+      - server
+    command: python client.py 2
+
+  node3:
+    build: .
+    container_name: Node-3
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    depends_on:
+      - server
+    command: python client.py 3
