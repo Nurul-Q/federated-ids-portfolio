@@ -1,1 +1,23 @@
+PROJECT DEMONSTRATION
+=====================
 
+Federated Learning-Based Intrusion Detection System (IDS)
+
+This demonstration presents the implementation of a distributed
+Intrusion Detection System using Federated Learning.
+
+The video showcases the system architecture, federated client-server
+workflow, model training process, and network traffic classification.
+
+The project uses Flower for federated learning coordination,
+TensorFlow/Keras for model development, Docker Compose for the
+distributed environment, and the CIC-IDS dataset for network traffic
+classification.
+
+Detection Classes:
+- BENIGN
+- DDoS
+- PortScan
+
+Video : 
+https://docs.google.com/videos/d/1QhQLu2p3nLMAE-Rk35mYm--qzZwkznDjFxdKznyRvdo/edit?usp=drive_link
